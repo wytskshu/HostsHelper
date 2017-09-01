@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mockingjay.hostshelper.UI.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="Hosts助手"
+            app:titleTextColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbar"></android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <Button
+                android:id="@+id/bt_update_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="9dp"
+                android:layout_weight="1"
+                android:text="打开hosts"
+                android:textColor="@color/white"
+                android:background="@drawable/buttonc"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bt_delete_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="9dp"
+                android:textColor="@color/white"
+                android:background="@drawable/buttonc"
+                android:layout_weight="1"
+                android:text="全部删除" />
+
+            <Button
+                android:id="@+id/bt_defult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonc"
+                android:textColor="@color/white"
+                android:layout_margin="9dp"
+                android:layout_weight="1"
+                android:text="恢复默认" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textviewliebiao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="源列表"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textSize="14sp"
+           />
+
+        <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+            android:id="@+id/main_recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"></com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@mipmap/ico_add"
+        app:borderWidth="0dp" />
+</android.support.design.widget.CoordinatorLayout>
