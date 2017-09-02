@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity() {
                         if (enable == 0) {
                             AlertDialog.alertshure(this@MainActivity, "确定要启用吗(不需要重启)", {
                                 if (enable == 0) {
-                                    Toast.makeText(this, "正在启用", Toast.LENGTH_SHORT).show()
+                                    //Toast.makeText(this, "正在启用", Toast.LENGTH_SHORT).show()
                                    // Log.d(TAG,mlists[adapterPosition].contentpath)
                                     var lists = File.readFileByLinesToListToShell(mlists[adapterPosition].contentpath, mlists[adapterPosition].keyflag)
                                     Shell.HandleShell(lists, true)
